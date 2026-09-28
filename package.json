@@ -1,7 +1,7 @@
 {
   "name": "mmm-sacredgeometry",
   "version": "1.0.0",
-  "description": "MagicMirror² module: animated sacred-theory simulations (Lorenz attractor, diverging pendulums, fractal basins, logistic map, symmetric icons, the three-body problem, chaotic billiards, rule 30), and pages of physics and mathematics: a Bohr-style atom and hydrogen's orbitals, a fractal zoom, sacred geometry, the planets' dance, Chladni figures, aperiodic and hyperbolic tilings, snow crystals, and tonight's sky.",
+  "description": "MagicMirror² module: sacred geometry, a new figure each time it is shown, drawn with compass and straightedge from the centre out, then held.",
   "main": "MMM-SacredGeometry.js",
   "scripts": {
     "test": "node --test"
@@ -12,6 +12,7 @@
     "Flower of Life",
     "Metatron's Cube",
     "mandala",
+    "compass and straightedge",
     "geometry",
     "generative art"
   ],
