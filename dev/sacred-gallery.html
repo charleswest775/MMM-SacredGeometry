@@ -25,7 +25,7 @@
 		const q = new URLSearchParams(location.search);
 		const size = Number(q.get("size")) || 300, count = Number(q.get("count")) || 12;
 		const options = { sacredFolds: q.get("sacredFolds") || [], sacredPalettes: q.get("sacredPalettes") || [] };
-		const Sacred = window.ChaosSimulations.sacred, SG = window.ChaosSacredGeometry;
+		const Sacred = window.SacredSimulations.sacred, SG = window.SacredGeometry;
 
 		function show (seed) {
 			const sim = new Sacred({ ...options, sacredSeed: seed ?? undefined });

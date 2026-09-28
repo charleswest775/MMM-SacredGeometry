@@ -1,4 +1,4 @@
-/* Not chaos: sacred geometry. A figure no one has seen before (sacred-geometry.js makes one from a
+/* Sacred geometry. A figure no one has seen before (sacred-geometry.js makes one from a
  * random seed) draws itself from the centre out, circle by circle and line by line, every
  * symmetric copy at once, in light lines on black around a glow; then it holds, finished.
  *
@@ -7,7 +7,7 @@
  * with "lighter" compositing, so where they cross they brighten, as light does.
  */
 (function (root) {
-	const SG = root.ChaosSacredGeometry || require("./sacred-geometry.js");
+	const SG = root.SacredGeometry || require("./sacred-geometry.js");
 
 	const GLOW_SECONDS = 1.2;  // the glow fades in first, then the pens start
 	const MARGIN = 0.95;       // the figure's radius, as a fraction of half the canvas
@@ -190,8 +190,8 @@
 				subtitle: `${n}-fold ${chiral ? "rotation" : "symmetry"} · drawn from the centre out · figure ${SG.seedName(seed)}`,
 				equations: [
 					`the ${NAMES[n] || `regular ${n}-gon`}: &nbsp;${side}${value}`,
-					`<span class="chaos-note">${note ? `${note} ` : ""}${Sacred.constructibility(n)}</span>`,
-					`<span class="chaos-note">${layers.filter((L) => !L.plain).map((L) => L.name).join(" &nbsp;·&nbsp; ")}</span>`
+					`<span class="sacred-note">${note ? `${note} ` : ""}${Sacred.constructibility(n)}</span>`,
+					`<span class="sacred-note">${layers.filter((L) => !L.plain).map((L) => L.name).join(" &nbsp;·&nbsp; ")}</span>`
 				]
 			};
 		}
@@ -251,7 +251,7 @@
 
 	Sacred.info = { title: "Sacred geometry", equations: [] };
 
-	root.ChaosSimulations = root.ChaosSimulations || {};
-	root.ChaosSimulations.sacred = Sacred;
+	root.SacredSimulations = root.SacredSimulations || {};
+	root.SacredSimulations.sacred = Sacred;
 	if (typeof module !== "undefined") module.exports = { Sacred };
 })(typeof window !== "undefined" ? window : globalThis);

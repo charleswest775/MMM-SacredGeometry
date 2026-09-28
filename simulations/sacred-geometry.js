@@ -853,6 +853,6 @@
 		strokeLength, pointAt, reach, clip, bow, spiral, whorldRing, starTangent, starInner, random,
 		PALETTES, FOLDS, PHI
 	};
-	root.ChaosSacredGeometry = SacredGeometry;
+	root.SacredGeometry = SacredGeometry;
 	if (typeof module !== "undefined") module.exports = SacredGeometry;
 })(typeof window !== "undefined" ? window : globalThis);
